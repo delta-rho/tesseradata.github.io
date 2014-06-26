@@ -524,3 +524,12 @@ li.pubs {
   font-size:11px;
 }
 
+.featurette p {
+  font-size: 18px;
+}
+
+.featurette-image {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+

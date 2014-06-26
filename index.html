@@ -184,7 +184,7 @@ The Tessera computational environment is powered by a statistical approach, Divi
             <span class="text-danger">Divide and Recombine (D&amp;R)</span>
           </h3>
             <p>
-Tessera is powered by Divide and Recombine. In D&amp;R, we seek meaningful ways to divide the data into subsets, apply statistical methods to each subset independently, and recombine the results of those computations in a statistically valid way.  Sometimes the results are approximations of the exact result had we been able to process the data as a whole, but the potential slight loss in accuracy is a small penalty to pay for the very simple, fast computation.  In D&amp;R, the data are parallelized, not the statistical methods.  Thus we have access the existing vast library of methods available in R.  
+Tessera is powered by Divide and Recombine. In D&amp;R, we seek meaningful ways to divide the data into subsets, apply statistical methods to each subset independently, and recombine the results of those computations in a statistically valid way.  Sometimes the results are approximations of the exact result had we been able to process the data as a whole, but the potential slight loss in accuracy is a small penalty to pay for the simple, fast computation.  In D&amp;R, the data are parallelized, not the statistical methods.  Thus we have access the existing vast library of methods available in R.  
 <!-- D&amp;R statistics research seeks division and recombination methods to maximize the accuracy of a result and to characterize its statistical variability. -->
           </p>
         </div>
@@ -233,19 +233,7 @@ Trelliscope is a visualization tool based on Trellis Display that enables scalab
             <span class="text-danger">RHIPE</span>
           </h3>
           <p>
-RHIPE is the R and Hadoop Integrated Programming Environment.  RHIPE allows an analyst to run Hadoop MapReduce jobs wholly from within R.  RHIPE is used by datadr when the back end for datadr is Hadoop.  You can also program D&amp;R
-using RHIPE. In this case, the analyst programs D&amp;R at a lower level than for datadr.
-<!-- Tessera is designed to support multiple backends. The datadr engine requires 
-architectures that support MapReduce on key-value stores.  The obvious choice 
-here is Hadoop, which is the system we primarily support through the R and 
-Hadoop Integrated Programming Environment (RHIPE).  However, we can also 
-support systems such as Spark. -->
-<!-- The datadr package also includes its own MapReduce engine that operates on 
-single workstations, using multi-core R to distribute the computation while 
-storing data on the native file system.  This local MapReduce engine makes it 
-easy to develop DataDR code on a small scale before deploying it on a larger 
-system, and it allows new users to learn DataDR and enjoy its benefits, even if 
-they do not have access to big-data infrastructure. -->
+RHIPE is the R and Hadoop Integrated Programming Environment.  RHIPE allows an analyst to run Hadoop MapReduce jobs wholly from within R.  RHIPE is used by datadr when the back end for datadr is Hadoop.  You can also perform D&amp;R operations directly through RHIPE MapReduce jobs, as MapReduce is sufficient for D&amp;R, although in this case you are programming at a lower level than for datadr.
           </p>
         </div>
         <div class="col-md-5">
