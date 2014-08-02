@@ -352,63 +352,76 @@ The EMR scripts and instructions are available on
               <h3>Try It</h3>
               <!-- <hr class="big-hr black"> -->
               <p>
-Here is a simple example to get a feel for Tessera usage.  For more compelling 
+Here is a simple example to get a feel for Tessera usage.  Commentary about the example is available in the datadr tutorial <a href="http://tesseradata.org/docs-datadr/#quickstart" target="_blank">here</a>.  For more compelling 
 examples of Tessera in action, as well as in-depth tutorials, check out the 
-<span class="page-scroll"><a href="#resources">Resources</a></span> section.
+<span class="page-scroll"><a href="#resources">Resources</a></span> section.  
               </p>
-              <pre class="no-border"><code class="language-r">library(datadr); library(trelliscope)
+              <pre class="no-border"><code class="language-r"># install package with housing data
+devtools::install_github("housingData", "hafen")
+library(housingData)
+library(datadr); library(trelliscope)
 
-# barley data as a local "distributed data frame"
-barleyDdf &lt;- ddf(barley)
+# look at housing data
+head(housing)
 
-# divide the ddf by the variable "site"
-bySite &lt;- divide(barleyDdf, by = "site")
-bySite
+# divide by county and state
+byCounty <- divide(housing, 
+   by = c("county", "state"), update = TRUE)
 
-# look at the first subset
-bySite[[1]]
+# look at summaries
+summary(byCounty)
 
-# look at the Grand Rapids subset
-bySite[["site=Grand Rapids"]]
+# look at overall distribution of median list price
+priceQ <- drQuantile(byCounty, var = "medListPriceSqft")
+xyplot(q ~ fval, data = priceQ, 
+   scales = list(y = list(log = 10)))
 
-# get mean yield for each and recombine with "rbind"
-recombine(bySite,
-   apply = function(x) mean(x$yield),
-   combine = combRbind())
+# slope of fitted line of list price for each county
+lmCoef <- function(x)
+   coef(lm(medListPriceSqft ~ time, data = x))[2]
+# apply lmCoef to each subset
+byCountySlope <- addTransform(byCounty, lmCoef)
 
-## make a trelliscope display for the bySite division
+# look at a subset of transformed data
+byCountySlope[[1]]
 
-# initialize visualization database (vdb) connection
-vdbConn("vdb", autoYes = TRUE)
+# recombine all slopes into a single data frame
+countySlopes <- recombine(byCountySlope, combRbind)
+plot(sort(countySlopes$val))
 
-# make and test simple dotplot panel function
-pf &lt;- function(x)
-   dotplot(variety ~ yield, data = x)
-pf(bySite[[1]][[2]])
+# make a time series trelliscope display
+vdbConn("housingjunk/vdb", autoYes = TRUE)
 
-# make and test simple cognostics function
-cf &lt;- function(x) { list(
-   meanYield = cogMean(x$yield, desc = "mean yield"),
-   range = cogRange(x$yield, desc = "yield range"),
-   min = cog(min(x$yield), desc = "min yield"),
-   max = cog(max(x$yield), desc = "min yield")
+# make and test panel function
+timePanel <- function(x)
+   xyplot(medListPriceSqft + medSoldPriceSqft ~ time,
+      data = x, auto.key = TRUE, ylab = "Price / Sq. Ft.")
+timePanel(byCounty[[1]][[2]])
+
+# make and test cognostics function
+priceCog <- function(x) { list(
+   slope = cog(lmCoef(x), desc = "list price slope"),
+   meanList = cogMean(x$medListPriceSqft),
+   listRange = cogRange(x$medListPriceSqft),
+   nObs = cog(length(which(!is.na(x$medListPriceSqft))), 
+      desc = "number of non-NA list prices")
 )}
-cf(bySite[[1]][[2]])
+priceCog(byCounty[[1]][[2]])
 
 # add display with this panel and cog function to vdb
-makeDisplay(bySite,
-   name = "variety_vs_yield",
-   desc = "test display with barley data",
-   panelFn = pf, cogFn = cf,
+makeDisplay(byCounty,
+   name = "list_sold_vs_time",
+   desc = "List and sold price over time",
+   panelFn = timePanel, cogFn = priceCog,
    width = 400, height = 400,
-   lims = list(x = "same", y = "free")
-)
+   lims = list(x = "same"))
 
 # view the display
 view()
-</code></pre>
-<!-- The result of calling <code>view()</code> should look something like 
-<a href="#">this</a>. -->
+              </code></pre>
+              <p>
+                You can view this and some related Trelliscope displays <a href="http://hafen.shinyapps.io/housingDemo/" target="_blank">here</a>.
+              </p>
             </div>
           </div>
         </div>
