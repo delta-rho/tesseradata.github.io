@@ -1,0 +1,22 @@
+# Dependencies
+markdown:          redcarpet
+highlighter:       false
+
+# Permalinks
+permalink:         pretty
+
+# Setup
+title:             Tessera
+tagline:           Analyze Large Complex Data with R
+url:               http://tesseradata.org
+baseurl:           /
+excerpt_separator: <!--more-->
+author:
+  name:            Ryan Hafen
+  url:             https://twitter.com/tesseradata
+  email:           rhafen@gmail.com
+
+# Custom vars
+version:           1.0.0
+github:
+  repo:            https://github.com/tesseradata/tesseradata.github.io
