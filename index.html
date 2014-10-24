@@ -10,10 +10,13 @@
 
   <title>Tessera</title>
 
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="public/js/grid.js"></script>
+
   <!-- Bootstrap Core CSS -->
   <link href="public/css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="public/css/custom.css" rel="stylesheet" type="text/css">
-	<link href="public/icomoon/style.css" rel="stylesheet">
+  <link href="public/icomoon/style.css" rel="stylesheet">
 
   <!-- prism -->
   <link href="public/prism/prism.css" rel="stylesheet">
@@ -23,6 +26,8 @@
 
   <!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 
   <!-- IE8 support for HTML5 elements and media queries -->
@@ -56,7 +61,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#page-top">Tessera</a>
+        <a class="navbar-brand" href="#page-top">
+           <img src="public/images/icon.png" alt="tessera icon" width="30px" height="30px" style="margin-top: -6px;">
+           Tessera
+        </a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -77,9 +85,12 @@
           <li class="page-scroll">
             <a id="href-aboutus" href="#aboutus">About Us</a>
           </li>
-          <!-- <li class="page-scroll">
+          <li>
             <a href="blog">Blog</a>
-          </li> -->
+          </li>
+          <li id="header-twitter">
+            <a href="https://twitter.com/TesseraIO" target="_blank"><i class="icon-twitter"></i></a>
+          </li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -104,7 +115,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="intro-text">
-            Open Source Environment for Deep Analysis of Large Complex Data
+            Open source environment for deep analysis of large complex data
           </div>
         </div>
       </div>
@@ -129,7 +140,7 @@ With Tessera you can apply the thousands of methods of statistics, machine learn
 <!-- With Tessera, if you know R, you can analyze big data. -->
               </p>
               <p class="page-scroll">
-                <a href="#components"> More detail on Tessera components 
+                <a href="#components"> Tessera components 
                 <i class="icon-chevron-right more-icon"></i></a>
               </p>
             </div>
@@ -184,9 +195,9 @@ The development of Tessera began and continues to be driven by our team's work o
     </div>
   </section>
   
-  <div class="arrow-down arrow-lightblue"></div>
+  <div class="sec-normal"><div class="arrow-down arrow-lightblue"></div></div>
   
-  <section id="components">
+  <section id="components" class="sec-normal">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -203,12 +214,13 @@ The Tessera computational environment is powered by a statistical approach, Divi
       <div class="row featurette">
         <div class="col-md-7">
           <h3 class="featurette-heading">
-            <span class="text-danger">Divide and Recombine (D&amp;R)</span>
+            <span class="component-header">Divide and Recombine (D&amp;R)</span>
           </h3>
             <p>
-Tessera is powered by Divide and Recombine. In D&amp;R, we seek meaningful ways to divide the data into subsets, apply statistical methods to each subset independently, and recombine the results of those computations in a statistically valid way.  Sometimes the results are approximations of the exact result had we been able to process the data as a whole, but the potential slight loss in accuracy is a small penalty to pay for the simple, fast computation.  In D&amp;R, the data are parallelized, not the statistical methods.  Thus we have access the existing vast library of methods available in R.  
+Tessera is powered by Divide and Recombine. In D&amp;R, we seek meaningful ways to divide the data into subsets, apply statistical methods to each subset independently, and recombine the results of those computations in a statistically valid way.  This enables us to use the  existing vast library of methods available in R - no need to write scalable versions.  <!-- Sometimes the results are approximations of the exact result had we been able to process the data as a whole, but the potential slight loss in accuracy is a small penalty to pay for the simple, fast computation.  In D&amp;R, the data are parallelized, not the statistical methods.  Thus we have access the existing vast library of methods available in R.  --> 
 <!-- D&amp;R statistics research seeks division and recombination methods to maximize the accuracy of a result and to characterize its statistical variability. -->
           </p>
+          <a href="#" class="btn btn-warning">Learn More <i class="icon-file"></i></a>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="public/images/drdiagram.png" alt="divide and recombine">
@@ -220,11 +232,13 @@ Tessera is powered by Divide and Recombine. In D&amp;R, we seek meaningful ways 
       <div class="row featurette">
         <div class="col-md-7">
           <h3 class="featurette-heading">
-            <span class="text-danger">datadr</span>
+            <span class="component-header">datadr</span>
           </h3>
           <p>
-The datadr R package provides a high-level interface to D&amp;R operations, making specification of divisions, analytic methods, and recombinations easy.  It represents large datasets as native R objects and allows D&amp;R operations to  be run against them.  In addition to division and recombination methods, datadr also provides several indispensable tools for reading and manipulating data as well as a collection of standard division-independent statistical methods.  The interface is designed to be back end agnostic, so that as new distributed computing technology comes along, datadr will be able to harness it.
+The datadr R package provides a simple interface to D&amp;R operations.  <!-- In addition to D&amp;R operations, datadr also provides tools for reading and manipulating data as well as a collection of standard division-independent statistical methods. -->  The interface is back end agnostic, so that as new distributed computing technology comes along, datadr will be able to harness it.  Datadr currently supports in-memory, local disk / multicore, and Hadoop back ends, with experimental support for Spark.  Regardless of the back end, all coding is done entirely in R, and all data is represented as R objects.
           </p>
+          <a href="#" class="btn btn-warning">Learn More <i class="icon-file"></i></a>
+          <a href="#" class="btn btn-warning">Source <i class="icon-github"></i></a>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="public/images/datadr.png" alt="datadr">
@@ -236,11 +250,13 @@ The datadr R package provides a high-level interface to D&amp;R operations, maki
       <div class="row featurette">
         <div class="col-md-7 featurette-text">
           <h3 class="featurette-heading">
-            <span class="text-danger">Trelliscope</span>
+            <span class="component-header">Trelliscope</span>
           </h3>
           <p>
 Trelliscope is a visualization tool based on Trellis Display that enables scalable detailed visualization of data.  Trellis Display operates by  dividing the data into subsets.  A visualization method is applied to each subset and shown on one panel of a multi-panel trellis display. This framework has proven to be powerful mechanism for all data, large and small.  Trelliscope extends Trellis to big data.  With big data, often there are too many subsets to look at all panels in a display.  Trelliscope provides an interactive viewer that allows the analyst to sample, sort, and filter panels of a display on various quantities of interest.
           </p>
+          <a href="#" class="btn btn-warning">Learn More <i class="icon-file"></i></a>
+          <a href="#" class="btn btn-warning">Source <i class="icon-github"></i></a>
         </div>
         <div class="col-md-5 featurette-image">
           <img class="featurette-image img-responsive" src="public/images/trelliscope.png" alt="trelliscope">
@@ -252,11 +268,13 @@ Trelliscope is a visualization tool based on Trellis Display that enables scalab
       <div class="row featurette">
         <div class="col-md-7">
           <h3 class="featurette-heading">
-            <span class="text-danger">RHIPE</span>
+            <span class="component-header">RHIPE</span>
           </h3>
           <p>
-RHIPE is the R and Hadoop Integrated Programming Environment.  RHIPE allows an analyst to run Hadoop MapReduce jobs wholly from within R.  RHIPE is used by datadr when the back end for datadr is Hadoop.  You can also perform D&amp;R operations directly through RHIPE MapReduce jobs, as MapReduce is sufficient for D&amp;R, although in this case you are programming at a lower level than for datadr.
+RHIPE is the R and Hadoop Integrated Programming Environment.  RHIPE allows an analyst to run Hadoop MapReduce jobs wholly from within R.  RHIPE is used by datadr when the back end for datadr is Hadoop.  You can also perform D&amp;R operations directly through RHIPE <!-- MapReduce jobs, as MapReduce is sufficient for D&amp;R -->, although in this case you are programming at a lower level.
           </p>
+          <a href="#" class="btn btn-warning">Learn More <i class="icon-file"></i></a>
+          <a href="#" class="btn btn-warning">Source <i class="icon-github"></i></a>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="public/images/rhipe.png" alt="rhipe">
@@ -604,9 +622,9 @@ tessera-dev+subscribe@googlegroups.com</a>
     </div>
   </section>
   
-  <div class="arrow-down arrow-gray"></div>
+  <div class="sec-normal"><div class="arrow-down arrow-gray"></div></div>
   
-  <section id="aboutus">
+  <section id="aboutus" class="sec-normal">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -638,8 +656,8 @@ Tessera team members collectively cover all of the intellectual areas of data sc
             <h6>We gratefully acknowledge the funding support of the following:</h6>
             <ul>
               <li>U.S. Department of Defense Advanced Research Projects Agency, XDATA program</li>
- <!-- <li>U.S. Department of Homeland Security, Science and Technology Directorate</li> -->
-               <li> Division of Math Sciences CDS&ampE Grant, National Science Foundation </li>
+              <li>U.S. Department of Homeland Security, Science and Technology Directorate</li>
+              <li> Division of Math Sciences CDS&ampE Grant, National Science Foundation </li>
               <li>PNNL, operated by Battelle for the U.S. Department of Energy, LDRD Program, Signature Discovery and Future Power Grid Initiatives</li>
             </ul>
           </div>

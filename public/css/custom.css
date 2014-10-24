@@ -4,7 +4,7 @@ body {
 }
 
 p {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 p.small {
@@ -95,6 +95,14 @@ header .intro-text .name {
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
+}
+
+.navbar-brand {
+/*  font-family: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif !important;*/
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  text-transform: none !important;
+  font-weight: normal;
+  font-size: 35px !important;
 }
 
 @media(max-width:768px) {
@@ -347,6 +355,11 @@ footer h3 {
 
 body {
   font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  background-color: #2c3e50;
+}
+
+.panel {
+  border-radius: 2px !important;
 }
 
 .hook-panel {
@@ -493,6 +506,15 @@ section.offcolor {
   background: #B2BCB0;
 }
 
+.sec-normal {
+  background: #fff;
+}
+
+section.sec-normal {
+  background: #fff;
+}
+
+
 pre code {
   background-color: #fff !important;
   font-size: 16px !important;
@@ -508,6 +530,10 @@ pre.no-border {
     display: flex;
     flex:1 1 auto;
   }
+}
+
+#main-navbar li#header-twitter {
+  font-size:20px;
 }
 
 .hook-panel {
@@ -598,12 +624,16 @@ li.pubs {
 }
 
 .featurette p {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .featurette-image {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+.component-header {
+  color: #C63D0F;
 }
 
 .blog-content {
