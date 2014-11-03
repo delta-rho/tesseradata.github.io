@@ -1,3 +1,5 @@
+exclude: [_ignore, CNAME, README.md]
+
 # Dependencies
 markdown:          redcarpet
 highlighter:       false
@@ -8,15 +10,20 @@ permalink:         pretty
 # Setup
 title:             Tessera
 tagline:           Analyze Large Complex Data with R
-url:               http://tesseradata.org
+url:               http://tessera.io
 baseurl:           /
 excerpt_separator: <!--more-->
-author:
-  name:            Ryan Hafen
-  url:             https://twitter.com/tesseradata
-  email:           rhafen@gmail.com
+
+
+authors:
+  ryan:
+    display_name: Ryan Hafen
+    email: rhafen@gmail.com
+    # web: 
+    twitter: hafenstats
+    github: hafen
 
 # Custom vars
 version:           1.0.0
 github:
-  repo:            https://github.com/tesseradata/tesseradata.github.io
+  repo:         https://github.com/tesseradata/tesseradata.github.io

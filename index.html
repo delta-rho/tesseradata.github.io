@@ -10,12 +10,12 @@
 
   <title>Tessera</title>
 
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-  <script type="text/javascript" src="public/js/grid.js"></script>
-
+  <link rel="shortcut icon" href="favicon.ico"/>
+  
   <!-- Bootstrap Core CSS -->
   <link href="public/css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="public/css/custom.css" rel="stylesheet" type="text/css">
+  <link href="public/css/mainpage.css" rel="stylesheet" type="text/css">
   <link href="public/icomoon/style.css" rel="stylesheet">
 
   <!-- prism -->
@@ -28,7 +28,10 @@
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <!-- <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'> -->
   <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
 
   <!-- IE8 support for HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -86,7 +89,7 @@
             <a id="href-aboutus" href="#aboutus">About Us</a>
           </li>
           <li>
-            <a href="blog">Blog</a>
+            <a href="blog"s>Blog</a>
           </li>
           <li id="header-twitter">
             <a href="https://twitter.com/TesseraIO" target="_blank"><i class="icon-twitter"></i></a>
@@ -98,18 +101,16 @@
     <!-- /.container-fluid -->
   </nav>
   
-  <header>
-    <div class="container">
-      <div class="row" id="main-header">
-        <div class="col-lg-12">
-          <div class="intro-text">
-            <span class="name">Tessera</span>
-          </div>
-        </div>
-      </div>
+ <div id="header" class="container">
+    <div class="row">
+   <div id="header-grid">
+    <div id="header-text">
+      Tessera
     </div>
-  </header>
-  
+   </div>
+</div>
+ </div>
+
   <div id="header-sub">
     <div class="container">
       <div class="row">
@@ -122,21 +123,21 @@
     </div>
   </div>
 
-  <section id="hooks" class="lightblue">
+  <section id="hooks" class="gray">
     <div class="container">
       <div class="row equal">
         <div class="col-sm-4">
           <div class="panel hook-panel main-hook-panel">
             <div class="panel-body">
-              <div class="hook-circle">
+              <div class="hook-circle-big circle-red">
                 <div class="inside-circle-lightning">
                   <i class="icon-lightning"></i>
                 </div>
               </div>
-              <h4>The Power of R with Big Data</h4>
+              <h4 class="hook-head-red">The Power of R with Big Data</h4>
               <!-- <hr class="big-hr black"> -->
               <p>
-With Tessera you can apply the thousands of methods of statistics, machine learning, and visualization implemented in the powerful R language to large data sets - without being an expert in distributed computing. 
+Apply the thousands of statistical and visualization methods in the R language with simple commands over back ends like Hadoop - without being an expert in distributed computing.
 <!-- With Tessera, if you know R, you can analyze big data. -->
               </p>
               <p class="page-scroll">
@@ -149,24 +150,19 @@ With Tessera you can apply the thousands of methods of statistics, machine learn
         <div class="col-sm-4">
           <div class="panel hook-panel main-hook-panel">
             <div class="panel-body">
-              <div class="hook-circle">
+              <div class="hook-circle-big circle-green">
                 <div class="inside-circle-stopwatch">
-                  <i class="icon-stopwatch2"></i>
+                  <i class="icon-watch"></i>
                 </div>
               </div>
-              <h4>Get Started in Minutes</h4>
+              <h4 class="hook-head-green">Get Started in Minutes</h4>
               <!-- <hr class="big-hr black"> -->
               <p>
-Tessera is a powerful computational environment for data large and small. From installation on a workstation to the Amazon cloud, we've made it easy for you to get started.
+Tessera is a powerful computational environment for data large and small. From installation on a single workstation to the Amazon cloud, we've made it easy for you to get started.
               </p>
               <p class="page-scroll">
                 <a href="#quickstart">Quickstart guide
                 <i class="icon-chevron-right more-icon"></i></a>
-              </p>
-              <p>
-                Once you are up and running, see our
-                <span class="page-scroll"><a href="#resources">Resources for using Tessera
-                <i class="icon-chevron-right more-icon"></i></a></span>
               </p>
             </div>
           </div>
@@ -174,19 +170,19 @@ Tessera is a powerful computational environment for data large and small. From i
         <div class="col-sm-4">
           <div class="panel hook-panel main-hook-panel">
             <div class="panel-body">
-              <div class="hook-circle">
-                <div class="inside-circle-group">
-                  <i class="icon-group"></i>
+              <div class="hook-circle-big circle-orange">
+                <div class="inside-circle-resource">
+                  <i class="icon-file-text"></i>
                 </div>
               </div>
-              <h4>Built by Data Scientists</h4>
+              <h4 class="hook-head-orange">Resources to Learn &amp; Join</h4>
               <!-- <hr class="big-hr black"> -->
               <p>
-The development of Tessera began and continues to be driven by our team's work on deep statistical analysis of large complex data.  Expertise on our team covers all areas of data science, from cluster hardware design for big data to theoretical statistics.
+Once you are up and running, check out our detailed documentation, join our mailing list, browse the code, and learn how to join the open source team!
               </p>
               <p class="page-scroll">
-                <a href="#aboutus">About us
-                <i class="icon-chevron-right more-icon"></i></a>
+                <span class="page-scroll"><a href="#resources">Resources
+                <i class="icon-chevron-right more-icon"></i></a></span>
               </p>
             </div>
           </div>
@@ -195,7 +191,7 @@ The development of Tessera began and continues to be driven by our team's work o
     </div>
   </section>
   
-  <div class="sec-normal"><div class="arrow-down arrow-lightblue"></div></div>
+  <div class="sec-normal"><div class="arrow-down arrow-gray"></div></div>
   
   <section id="components" class="sec-normal">
     <div class="container">
@@ -204,7 +200,7 @@ The development of Tessera began and continues to be driven by our team's work o
           <h2>Tessera Components</h2>
           <hr class="big-hr black">
           <p>
-The Tessera computational environment is powered by a statistical approach, Divide and Recombine. At the front end, the analyst programs in R. At the back end is a distributed parallel computational environment such as Hadoop. In between are three Tessera packages: datadr, Trelliscope, and RHIPE. These packages enable the data scientist to communicate with the back end by simple R commands.
+The Tessera computational environment is powered by a statistical approach, Divide and Recombine. At the front end, the analyst programs in R. At the back end is a distributed parallel computational environment such as Hadoop. In between are three Tessera packages: datadr, Trelliscope, and RHIPE. These packages enable the data scientist to communicate with the back end with simple R commands.
           </p>
         </div>
       </div>
@@ -220,7 +216,7 @@ The Tessera computational environment is powered by a statistical approach, Divi
 Tessera is powered by Divide and Recombine. In D&amp;R, we seek meaningful ways to divide the data into subsets, apply statistical methods to each subset independently, and recombine the results of those computations in a statistically valid way.  This enables us to use the  existing vast library of methods available in R - no need to write scalable versions.  <!-- Sometimes the results are approximations of the exact result had we been able to process the data as a whole, but the potential slight loss in accuracy is a small penalty to pay for the simple, fast computation.  In D&amp;R, the data are parallelized, not the statistical methods.  Thus we have access the existing vast library of methods available in R.  --> 
 <!-- D&amp;R statistics research seeks division and recombination methods to maximize the accuracy of a result and to characterize its statistical variability. -->
           </p>
-          <a href="#" class="btn btn-warning">Learn More <i class="icon-file"></i></a>
+          <a href="http://ml.stat.purdue.edu/docs/dr.rhipe.stat.2012.pdf" class="btn btn-sm btn-warning">Read the D&amp;R Paper <i class="icon-file"></i></a>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="public/images/drdiagram.png" alt="divide and recombine">
@@ -235,10 +231,10 @@ Tessera is powered by Divide and Recombine. In D&amp;R, we seek meaningful ways 
             <span class="component-header">datadr</span>
           </h3>
           <p>
-The datadr R package provides a simple interface to D&amp;R operations.  <!-- In addition to D&amp;R operations, datadr also provides tools for reading and manipulating data as well as a collection of standard division-independent statistical methods. -->  The interface is back end agnostic, so that as new distributed computing technology comes along, datadr will be able to harness it.  Datadr currently supports in-memory, local disk / multicore, and Hadoop back ends, with experimental support for Spark.  Regardless of the back end, all coding is done entirely in R, and all data is represented as R objects.
+The datadr R package provides a simple interface to D&amp;R operations.  <!-- In addition to D&amp;R operations, datadr also provides tools for reading and manipulating data as well as a collection of standard division-independent statistical methods. -->  The interface is back end agnostic, so that as new distributed computing technology comes along, datadr will be able to harness it.  Datadr currently supports in-memory, local disk / multicore, and <a href="http://hadoop.apache.org">Hadoop</a> back ends, with experimental support for <a href="https://spark.apache.org">Apache Spark</a>.  Regardless of the back end, coding is done entirely in R and data is represented as R objects.
           </p>
-          <a href="#" class="btn btn-warning">Learn More <i class="icon-file"></i></a>
-          <a href="#" class="btn btn-warning">Source <i class="icon-github"></i></a>
+          <a href="http://tessera.io/docs-datadr/" class="btn btn-sm btn-warning">datadr Tutorial <i class="icon-file"></i></a>
+          <a href="http://github.com/tesseradata/datadr" class="btn btn-sm btn-warning">Source on Github <i class="icon-github"></i></a>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="public/images/datadr.png" alt="datadr">
@@ -253,10 +249,10 @@ The datadr R package provides a simple interface to D&amp;R operations.  <!-- In
             <span class="component-header">Trelliscope</span>
           </h3>
           <p>
-Trelliscope is a visualization tool based on Trellis Display that enables scalable detailed visualization of data.  Trellis Display operates by  dividing the data into subsets.  A visualization method is applied to each subset and shown on one panel of a multi-panel trellis display. This framework has proven to be powerful mechanism for all data, large and small.  Trelliscope extends Trellis to big data.  With big data, often there are too many subsets to look at all panels in a display.  Trelliscope provides an interactive viewer that allows the analyst to sample, sort, and filter panels of a display on various quantities of interest.
+Trelliscope is a D&amp;R visualization tool based on <a href="http://trellischarts.com/what-is-a-trellis-chart">Trellis Display</a> that enables scalable, flexible, detailed visualization of data.  Trellis Display has repeatedly proven itself as an effective approach to visualizing complex data.  Trelliscope, backed by datadr, scales Trellis Display, allowing the analyst to break potentially very large data sets into many subsets, apply a visualization method to each subset, and then interactively sample, sort, and filter the panels of the display on various quantities of interest.
           </p>
-          <a href="#" class="btn btn-warning">Learn More <i class="icon-file"></i></a>
-          <a href="#" class="btn btn-warning">Source <i class="icon-github"></i></a>
+          <a href="http://tessera.io/docs-trelliscope/" class="btn btn-sm btn-warning">Trelliscope Tutorial <i class="icon-file"></i></a>
+          <a href="http://github.com/tesseradata/trelliscope" class="btn btn-sm btn-warning">Source on Github <i class="icon-github"></i></a>
         </div>
         <div class="col-md-5 featurette-image">
           <img class="featurette-image img-responsive" src="public/images/trelliscope.png" alt="trelliscope">
@@ -273,8 +269,8 @@ Trelliscope is a visualization tool based on Trellis Display that enables scalab
           <p>
 RHIPE is the R and Hadoop Integrated Programming Environment.  RHIPE allows an analyst to run Hadoop MapReduce jobs wholly from within R.  RHIPE is used by datadr when the back end for datadr is Hadoop.  You can also perform D&amp;R operations directly through RHIPE <!-- MapReduce jobs, as MapReduce is sufficient for D&amp;R -->, although in this case you are programming at a lower level.
           </p>
-          <a href="#" class="btn btn-warning">Learn More <i class="icon-file"></i></a>
-          <a href="#" class="btn btn-warning">Source <i class="icon-github"></i></a>
+          <a href="http://tessera.io/docs-RHIPE/" class="btn btn-sm btn-warning">RHIPE Tutorial <i class="icon-file"></i></a>
+          <a href="http://github.com/tesseradata/RHIPE" class="btn btn-sm btn-warning">Source on Github <i class="icon-github"></i></a>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="public/images/rhipe.png" alt="rhipe">
@@ -301,75 +297,65 @@ RHIPE is the R and Hadoop Integrated Programming Environment.  RHIPE allows an a
               <h3>Install</h3>
               <!-- <hr class="big-hr black"> -->
               <p>
-Whether you want to try Tessera on your workstation or you are ready to dig 
-into some big data, we have straightforward options for you to get your Tessera 
-environment up and running.
+Tessera is available as a <em>local stack</em> that can be installed on a single workstation and a <em>full stack</em> to be installed on a cluster.  In either case, we provide straightforward options for you to get your Tessera environment up and running.
               </p>
-              <h4><i class="icon-gift"></i>Workstation Installation</h4>
+              <p>
+The local stack simply consists of the following:
+                <ul>
+                  <li>R</li>
+                  <li>datadr R package</li>
+                  <li>Trelliscope R package</li>
+                </ul>
+              </p>
+              <p>
+The full stack has the above components as well as the the following on each node of the cluster:
+                <ul>
+                  <li>Hadoop</li>
+                  <li>RHIPE Hadoop connector R package</li>
+                  <li>RStudio Server (namenode only)</li>
+                  <li>Shiny Server (namenode only)</li>
+                </ul>
+It is also possible for other connectors and distributed computing technologies to be replaced by Hadoop and RHIPE, such as Spark and SparkR.  Regardless, your code stays virtually the same.
+              </p>
+              <h4><i class="icon-gift"></i>Local Stack on Workstation</h4>
               <div class="quickstart-text">
                 <p>
-After you have installed R, you can get going on a workstration simply by 
-installing a few R packages.  This setup will restrict you to data sizes 
-commensurate with the hardware of your workstation, but it is sufficient to get 
-a feel for Tessera and to analyze small or even moderate-sized data sets.
-                </p>
-                <p>
-Once you are comfortable with the Tessera tools, you can plug into large-scale 
-backends like Hadoop with virtually no changes to your code.
-                </p>
-                <p>
-To install, simply launch R, install the devtools package from CRAN, and type the following:
+After <a href="http://cran.us.r-project.org">installing R</a>, simply launch R, install the devtools package from CRAN, and then install the datadr and Trelliscope R packages:
                 </p>
                 <pre class="no-border"><code class="language-r">install.packages("devtools") # if not installed
 library(devtools)
-install_github("datadr", "tesseradata")
-install_github("trelliscope", "tesseradata")</code></pre>
+install_github("tesseradata/datadr")
+install_github("tesseradata/trelliscope")</code></pre>
               </div>
-
-              <h4><i class="icon-cube"></i>Vagrant Virtual Machine</h4>
+Now you are ready to try out the quick start code or begin working through the tutorials, and your environment is suitable for analyzing small to moderate (low gigabyte) data.
+              <h4><i class="icon-cube"></i>Full Stack on Vagrant VM</h4>
               <div class="quickstart-text">
                 <p>
-To get a feel for running in a large-scale Tessera environment, we have 
-provided a <a href="http://www.vagrantup.com">Vagrant</a> setup that with a few 
-simple commands allows you to provision a virtual machine with the entire 
-Tessera stack running, including
+To get a feel for running in a large-scale Tessera environment, we have provided a <a href="http://www.vagrantup.com">Vagrant</a> setup that with a few simple commands allows you to provision a virtual machine on your workstation with the full Tessera stack running.
                 </p>
-                <ul>
-                  <li>R 3.1</li>
-                  <li>Hadoop (CDH5 pseudo-distributed mode)</li>
-                  <li>Rhipe 0.74</li>
-                  <li>datadr</li>
-                  <li>Trelliscope</li>
-                  <li>RStudio Server</li>
-                  <li>Shiny Server</li>
-                </ul>
                 <p>
 The Vagrant script and instructions are available on 
-<a href="https://github.com/tesseradata/install-vagrant" target="_blank">Github.</a>
+<a href="https://github.com/tesseradata/install-vagrant">Github.</a>
                 </p>
               </div>
 
-              <h4><i class="icon-cloud"></i>Amazon Elastic MapReduce (EMR)</h4>
+              <h4><i class="icon-cloud"></i>Full Stack on Amazon Web Services</h4>
               <div class="quickstart-text">
                 <p>
-Setting up and installing all of the Tessera components on a bonafide cluster 
-requires more commitment in terms of hardware, installation, configuration, and 
-administration.
+We have provided an easy way to get going with Tessera in a large-scale environment through a simple set of scripts that provision the Tessera environment on Amazon's Elastic MapReduce (EMR).  This allows you to spin up virtual clusters on-demand.  An Amazon account is required.
                 </p>
                 <p>
-We have provided an easy way to get going with Tessera in a large-scale 
-environment through a simple set of scripts that provision the Tessera 
-environment on Amazon's Elastic MapReduce clusters.  This allows you to spin up 
-virtual clusters on-demand.  An Amazon account is required.
-                </p>
-                <p>
-This environment comes with <a href="http://www.rstudio.com">RStudio Server</a> 
-running on the master node, so that all you need is a web browser to access R 
-Studio, a fantastic R IDE that will be backed by your own Hadoop cluster.
+This environment comes with <a href="http://www.rstudio.com">RStudio Server</a> running on the master node, so that all you need is a web browser to access R Studio, a fantastic R IDE that will be backed by your own Hadoop cluster.
                 </p>
                 <p>
 The EMR scripts and instructions are available on 
-<a href="https://github.com/tesseradata/install-emr" target="_blank">Github.</a>
+<a href="https://github.com/tesseradata/install-emr">Github.</a>
+                </p>
+              </div>
+              <h4><i class="icon-server"></i>Full Stack on Your Cluster</h4>
+              <div class="quickstart-text">
+                <p>
+Setting up and installing all of the Tessera components on your own cluster will require more commitment in terms of hardware, installation, configuration, and administration.  We have put together an installation manual that is available <a href="public/docs/InstallCluster.pdf">here</a>.
                 </p>
               </div>
             </div>
@@ -381,9 +367,9 @@ The EMR scripts and instructions are available on
               <h3>Try It</h3>
               <!-- <hr class="big-hr black"> -->
               <p>
-Here is a simple example to get a feel for Tessera usage.  Commentary about the example is available in the datadr tutorial <a href="http://tesseradata.org/docs-datadr/#quickstart" target="_blank">here</a>.  For more compelling 
+Here is a simple example to get a feel for Tessera usage.  Commentary about the example is available in the datadr tutorial <a href="http://tessera.io/docs-datadr/#quickstart">here</a>.  For more compelling 
 examples of Tessera in action, as well as in-depth tutorials, check out the 
-<span class="page-scroll"><a href="#resources">Resources</a></span> section.  
+<span class="page-scroll"><a href="#resources">Resources</a></span> section and the <a href="blog"s>blog</a>.  
               </p>
               <pre class="no-border"><code class="language-r"># install package with housing data
 devtools::install_github("housingData", "hafen")
@@ -395,19 +381,20 @@ head(housing)
 
 # divide by county and state
 byCounty <- divide(housing, 
-   by = c("county", "state"), update = TRUE)
+  by = c("county", "state"), update = TRUE)
 
 # look at summaries
 summary(byCounty)
 
 # look at overall distribution of median list price
-priceQ <- drQuantile(byCounty, var = "medListPriceSqft")
+priceQ <- drQuantile(byCounty, 
+  var = "medListPriceSqft")
 xyplot(q ~ fval, data = priceQ, 
-   scales = list(y = list(log = 10)))
+  scales = list(y = list(log = 10)))
 
 # slope of fitted line of list price for each county
 lmCoef <- function(x)
-   coef(lm(medListPriceSqft ~ time, data = x))[2]
+  coef(lm(medListPriceSqft ~ time, data = x))[2]
 # apply lmCoef to each subset
 byCountySlope <- addTransform(byCounty, lmCoef)
 
@@ -423,27 +410,27 @@ vdbConn("housingjunk/vdb", autoYes = TRUE)
 
 # make and test panel function
 timePanel <- function(x)
-   xyplot(medListPriceSqft + medSoldPriceSqft ~ time,
-      data = x, auto.key = TRUE, ylab = "Price / Sq. Ft.")
+  xyplot(medListPriceSqft + medSoldPriceSqft ~ time,
+    data = x, auto.key = TRUE, ylab = "$ / Sq. Ft.")
 timePanel(byCounty[[1]][[2]])
 
 # make and test cognostics function
 priceCog <- function(x) { list(
-   slope = cog(lmCoef(x), desc = "list price slope"),
-   meanList = cogMean(x$medListPriceSqft),
-   listRange = cogRange(x$medListPriceSqft),
-   nObs = cog(length(which(!is.na(x$medListPriceSqft))), 
-      desc = "number of non-NA list prices")
+  slope = cog(lmCoef(x), desc = "list price slope"),
+  meanList = cogMean(x$medListPriceSqft),
+  listRange = cogRange(x$medListPriceSqft),
+  nObs = cog(sum(!is.na(x$medListPriceSqft))), 
+    desc = "number of non-NA list prices")
 )}
 priceCog(byCounty[[1]][[2]])
 
-# add display with this panel and cog function to vdb
+# add display panel and cog function to vdb
 makeDisplay(byCounty,
-   name = "list_sold_vs_time",
-   desc = "List and sold price over time",
-   panelFn = timePanel, cogFn = priceCog,
-   width = 400, height = 400,
-   lims = list(x = "same"))
+  name = "list_sold_vs_time",
+  desc = "List and sold price over time",
+  panelFn = timePanel, cogFn = priceCog,
+  width = 400, height = 400,
+  lims = list(x = "same"))
 
 # view the display
 view()
@@ -482,33 +469,50 @@ view()
               <p>
 The best way to get started digging deeper into Tessera is to follow the tutorials for our software components in the following order:
               </p>
-              <ul>
-                <li>
-                  <a href="http://tesseradata.github.io/docs-datadr/">
-                    datadr
-                  </a>
-                </li>
-                <li>
-                  <a href="http://tesseradata.github.io/docs-trelliscope/">
-                    Trelliscope
-                  </a>
-                </li>
-                <li>
-                  RHIPE (coming soon)
-                </li>
+              <ul class="media-list">
+              <!-- <li class="media">
+                <a class="pull-left" href="#">
+                  <i class="icon-file-text icon-big"></i>
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading hook-head-blue">D&amp;R Introduction</h5>
+                  stuff
+                </div>
+              </li> -->
+              <li class="media">
+                <a class="pull-left" href="http://tessera.io/docs-datadr/">
+                  <i class="icon-file-text icon-big"></i>
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading hook-head-blue"><a href="http://tessera.io/docs-datadr/">datadr</a></h5>
+                  Learn how to program D&amp;R with datadr
+                </div>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="http://tessera.io/docs-trelliscope/">
+                  <i class="icon-file-text icon-big"></i>
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading hook-head-blue"><a href="http://tessera.io/docs-trelliscope/">Trelliscope</a></h5>
+                  Learn how to create detailed interactive D&amp;R visualizations
+                </div>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="http://tessera.io/docs-RHIPE/">
+                  <i class="icon-file-text icon-big"></i>
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading hook-head-blue"><a href="http://tessera.io/docs-RHIPE/">RHIPE</a></h5>
+                  Learn the details of the datadr Hadoop back end
+                </div>
+              </li>
               </ul>
               <p>
-In addition to these tutorials, we provide analysis narratives that assume knowledge of the above tutorials and go deeper into illustrating the use of the tools in more realistic data analysis situations:
+In addition to these tutorials, we plan to provide analysis narratives that assume knowledge of the above tutorials and go deeper into illustrating the use of the tools in more realistic data analysis situations, which we will post both here and on our <a href="blog">blog<a>.
               </p>
               <ul>
-                <li>
-                  <a href="http://tesseradata.github.io/example-vast-challenge/">
-                    NetFlow Exploratory Analysis
-                  </a>
-                </li>
-                <li>
-                  More coming soon
-                </li>
+                <li><a href="http://tessera.io/example-vast-challenge/">NetFlow Exploratory Analysis</a></li>
+                <li>More coming soon</li>
               </ul>
             </div>
           </div>
@@ -528,41 +532,40 @@ In addition to these tutorials, we provide analysis narratives that assume knowl
               </p>
               <ul>
                 <li class="pubs">
-<a href="http://www.datadr.org/documents/dr.rhipe.stat.2012.pdf">
+<a href="http://ml.stat.purdue.edu/docs/dr.rhipe.stat.2012.pdf">
 Large Complex Data: Divide and Recombine (D&amp;R) with RHIPE.</a>
 ISI Stat, 2012
                 </li>
                 <li class="pubs">
-<a href="http://ml.stat.purdue.edu/gaby/trelliscope.ldav.2013.pdf">
+<a href="http://ml.stat.purdue.edu/docs/trelliscope.ldav.2013.pdf">
 Trelliscope: A System for Detailed Visualization in the Deep Analysis of Large Complex Data.</a>
 Large Data Analysis and Visualization (LDAV), 2013
                 </li>
                 <li class="pubs">
-<a href="http://www.datadr.org/documents/rhipe.thesis.2010.pdf">
+<a href="http://ml.stat.purdue.edu/docs/rhipe.thesis.2010.pdf">
 Computing Environment for the Statistical Analysis of Large and Complex Data.</a>
 Ph.D. Thesis, Saptarshi Guha, 2010
                 </li>
                 <li class="pubs">
-<a href="http://www.datadr.org/documents/vdb.jmlr.2009.pdf">
+<a href="http://ml.stat.purdue.edu/docs/vdb.jmlr.2009.pdf">
 Visualization Databases for the Analysis of Large Complex Datasets.</a>
 Journal of Machine Learning Research, 2009
                 </li>
                 <li class="pubs">
-<a href="http://www.datadr.org/documents/modelvoip.ejs.2010.pdf">
+<a href="http://ml.stat.purdue.edu/docs/modelvoip.ejs.2010.pdf">
 Statistical Analysis and Modeling of Internet VoIP Traffic for Network Engineering.</a>
 Electronic Journal of Statistics, 2010
                 </li>
                 <li class="pubs">
-<a href="http://www.datadr.org/documents/keystrokedetection.informscs.2011.pdf">
+<a href="http://ml.stat.purdue.edu/docs/keystrokedetection.informscs.2011.pdf">
 A Streaming Statistical Algorithm for Detection of SSH Keystroke Packets in TCP Connections.</a>
 INFORMS Computing Society Conference, 2011
                 </li>
                 <li class="pubs">
-<a href="http://www.datadr.org/documents/stldisease.biomed.2009.pdf">
+<a href="http://ml.stat.purdue.edu/docs/stldisease.biomed.2009.pdf">
 STL and Local Regression for Modeling Disease Surveillance Counts.</a>
 BMC Medical Informatics and Decision Making, 2009
                 </li>
-
               </ul>
             </div>
           </div>
@@ -573,20 +576,53 @@ BMC Medical Informatics and Decision Making, 2009
           <div class="panel hook-panel resource-panel">
             <div class="panel-body">
               <div class="hook-circle">
-                <div class="inside-circle-github">
-                  <i class="icon-github"></i>
+                <div class="inside-circle-question">
+                  <i class="icon-question"></i>
                 </div>
               </div>
-              <h4>Code</h4>
+              <h4>Get Help / Stay Connected</h4>
               <!-- <hr class="big-hr black"> -->
-              <p>
-Tessera is open source and source code for its components is 
-<a href="https://github.com/tesseradata">hosted on Github under the tesseradata organization.</a>
-              </p>
-              <p>
-Contributors are welcome!  Feel free to fork any of our component repositories 
-and introduce yourself on the developer's mailing list.
-              </p>
+              <ul class="media-list">
+              <li class="media">
+                <div class="pull-left help-icon-container">
+                  <i class="icon-google icon-big"></i>
+                </div>
+                <div class="media-body">
+                  Join our
+<a href="https://groups.google.com/forum/#!forum/tessera-users">
+google group / mailing list.</a>  Simply send an email to 
+<a href="mailto:tessera-users+subscribe@googlegroups.com">
+tessera-users+subscribe@googlegroups.com</a> to join.
+                </div>
+              </li>
+              <li class="media">
+                <div class="pull-left help-icon-container">
+                  <i class="icon-github icon-big"></i>
+                </div>
+                <div class="media-body">
+                  For bugs or feature requests, feel free to post issues on github: 
+                    <a href="https://github.com/tesseradata/datadr/issues">datadr</a>,
+                    <a href="https://github.com/tesseradata/trelliscope/issues">trelliscope</a>,
+                    <a href="https://github.com/tesseradata/RHIPE/issues">RHIPE</a>.
+                </div>
+              </li>
+              <li class="media">
+                <div class="pull-left help-icon-container">
+                  <i class="icon-stack-overflow icon-big"></i>
+                </div>
+                <div class="media-body">
+                  If you ask questions on Stack Overflow, be sure to add the tag [datadr], [trelliscope], or [tessera] so we can find them.
+                </div>
+              </li>
+              <li class="media">
+                <div class="pull-left help-icon-container">
+                  <i class="icon-twitter icon-big"></i>
+                </div>
+                <div class="media-body">
+                  Follow us on Twitter! <a href="https://twitter.com/TesseraIO">@TesseraIO</a>
+                </div>
+              </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -594,27 +630,31 @@ and introduce yourself on the developer's mailing list.
           <div class="panel hook-panel resource-panel">
             <div class="panel-body">
               <div class="hook-circle">
-                <div class="inside-circle-google">
-                  <i class="icon-google"></i>
+                <div class="inside-circle-fork">
+                  <i class="icon-code-fork"></i>
                 </div>
               </div>
-              <h4>User Groups</h4>
+              <h4>Get Involved</h4>
               <!-- <hr class="big-hr black"> -->
-              <p>
-If you have questions or issues, or just want to keep up on what is new, please 
-do not hesitate to join the 
-<a href="https://groups.google.com/forum/#!forum/tessera-users">
-users mailing list.</a>  Simply send an email to 
-<a href="mailto:tessera-users+subscribe@googlegroups.com">
-tessera-users+subscribe@googlegroups.com</a>
-              </p>
-              <p>
-Also, you can join our 
-<a href="https://groups.google.com/forum/#!forum/tessera-dev">
-developer's mailing list</a> by sending email to 
-<a href="mailto:tessera-dev+subscribe@googlegroups.com">
-tessera-dev+subscribe@googlegroups.com</a>
-              </p>
+              <ul class="media-list">
+              <li class="media">
+                <div class="pull-left help-icon-container">
+                  <i class="icon-code-fork icon-big"></i>
+                </div>
+                <div class="media-body">
+                  Contributors are welcome!  <br>Feel free to fork any of our component repositories: <a href="https://github.com/tesseradata/datadr">datadr</a>, <a href="https://github.com/tesseradata/trelliscope">trelliscope</a>, <a href="https://github.com/tesseradata/RHIPE">RHIPE</a>.  And check out our <a href="https://github.com/tesseradata/datadr/blob/master/CONTRIBUTING.md">contributing guide</a>.
+                </div>
+              </li>
+              <li class="media">
+                <div class="pull-left help-icon-container">
+                  <i class="icon-google icon-big"></i>
+                </div>
+                <div class="media-body">
+                  Join and introduce yourself on the <a href="https://groups.google.com/forum/#!forum/tessera-dev">developer's mailing list</a> by sending email to <a href="mailto:tessera-dev+subscribe@googlegroups.com">tessera-dev+subscribe@googlegroups.com</a>
+                </div>
+              </li>
+              <!-- irc -->
+              </ul>
             </div>
           </div>
         </div>
@@ -635,7 +675,7 @@ tessera-dev+subscribe@googlegroups.com</a>
       <div class="row">
         <div class="col-md-9 about-panel">
           <p>
-The Tessera project team is now 25 strong and growing.  Our team consists of faculty, students, and technical staff at the Purdue University Department of Statistics and Statistical Data Scientists and Computer Scientists at Pacific Northwest National Laboratory and Mozilla Corporation.
+Our team consists of faculty, students, and technical staff at the Purdue University Department of Statistics, and statisticians and computer scientists at Pacific Northwest National Laboratory and Mozilla Corporation.
           </p>
           <p>
 Tessera team members collectively cover all of the intellectual areas of data science, from cluster hardware design for big data to theoretical statistics. This has been necessary for Tessera to succeed  in the deep analysis of large complex data.  But none of this is more important than our team's experience in deep analyses of many big datasets.   It got us started. It has driven our past work. And our current big data analyses keep the driving going. 
@@ -657,7 +697,7 @@ Tessera team members collectively cover all of the intellectual areas of data sc
             <ul>
               <li>U.S. Department of Defense Advanced Research Projects Agency, XDATA program</li>
               <li>U.S. Department of Homeland Security, Science and Technology Directorate</li>
-              <li> Division of Math Sciences CDS&ampE Grant, National Science Foundation </li>
+              <li> Division of Math Sciences CDS&amp;E Grant, National Science Foundation </li>
               <li>PNNL, operated by Battelle for the U.S. Department of Energy, LDRD Program, Signature Discovery and Future Power Grid Initiatives</li>
             </ul>
           </div>
@@ -670,8 +710,7 @@ Tessera team members collectively cover all of the intellectual areas of data sc
               Copyright &copy; 2014 - Tessera
             </div>
             <div class="col-md-9">
-Header image reproduced with permission from <a href="mailto:Mosaicdesigner@aol.com">Allison Goldenstein</a> from 
-              <a href="http://www.mixed-upmosaics.com">Mixed-Up Mosaics</a>
+				Created by <a href="https://twitter.com/hafenstats">@hafenstats</a>
             </div>
           </div>
         </div>
@@ -685,7 +724,11 @@ Header image reproduced with permission from <a href="mailto:Mosaicdesigner@aol.
     </a>
   </div>
   
-  <script src="public/js/jquery-1.11.1.js"></script>
+  <!--<script src="public/js/jquery-1.11.1.js"></script>-->
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script>
+  <script type="text/javascript" src="public/js/grid.js"></script>
+  
   <script src="public/js/bootstrap.min.js"></script>
   <script src="public/js/custom.js"></script>
   <script src="public/js/navcollapse.js"></script>
