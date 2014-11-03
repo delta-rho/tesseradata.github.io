@@ -199,7 +199,7 @@ Once you are up and running, check out our detailed documentation, join our mail
         <div class="col-lg-12 text-center">
           <h2>Tessera Components</h2>
           <hr class="big-hr black">
-          <p>
+          <p class="comp-head">
 The Tessera computational environment is powered by a statistical approach, Divide and Recombine. At the front end, the analyst programs in R. At the back end is a distributed parallel computational environment such as Hadoop. In between are three Tessera packages: datadr, Trelliscope, and RHIPE. These packages enable the data scientist to communicate with the back end with simple R commands.
           </p>
         </div>
@@ -296,6 +296,7 @@ RHIPE is the R and Hadoop Integrated Programming Environment.  RHIPE allows an a
             <div class="panel-body">
               <h3>Install</h3>
               <!-- <hr class="big-hr black"> -->
+              <div class="quickstart-text">
               <p>
 Tessera is available as a <em>local stack</em> that can be installed on a single workstation and a <em>full stack</em> to be installed on a cluster.  In either case, we provide straightforward options for you to get your Tessera environment up and running.
               </p>
@@ -317,6 +318,7 @@ The full stack has the above components as well as the the following on each nod
                 </ul>
 It is also possible for other connectors and distributed computing technologies to be replaced by Hadoop and RHIPE, such as Spark and SparkR.  Regardless, your code stays virtually the same.
               </p>
+              </div>
               <h4><i class="icon-gift"></i>Local Stack on Workstation</h4>
               <div class="quickstart-text">
                 <p>
@@ -326,8 +328,10 @@ After <a href="http://cran.us.r-project.org">installing R</a>, simply launch R, 
 library(devtools)
 install_github("tesseradata/datadr")
 install_github("tesseradata/trelliscope")</code></pre>
-              </div>
+                <p>
 Now you are ready to try out the quick start code or begin working through the tutorials, and your environment is suitable for analyzing small to moderate (low gigabyte) data.
+                </p>
+              </div>
               <h4><i class="icon-cube"></i>Full Stack on Vagrant VM</h4>
               <div class="quickstart-text">
                 <p>

@@ -111,26 +111,6 @@ hr.big-hr:after {
   text-align: center;
 }
 
-@media(max-width:768px) {
-  #header {
-    height: 240px;
-  }
-  
-  #header-grid {
-    padding: 0px;
-    top: 59px;
-    height: 182px;
-  }
-  
-  #header-text {
-    font-size: 120px;
-  }
-  
-  #header-sub {
-    font-size: 20px;
-  }
-}
-
 @media(min-width:768px) {
   #header {
     height: 365px;
@@ -149,6 +129,86 @@ hr.big-hr:after {
   #header-sub {
     font-size: 30px;
   }
+
+  .featurette p, p.comp-head {
+    font-size: 22px;
+  }
+
+  .quickstart-panel, .quickstart-panel p, .about-panel p {
+    font-size: 18px;
+  }
+
+  pre code {
+    font-size: 16px !important;
+  }
+
+}
+
+@media(max-width:768px) {
+  #header {
+    height: 240px;
+  }
+  
+  #header-grid {
+    padding: 0px;
+    top: 59px;
+    height: 182px;
+  }
+  
+  #header-text {
+    font-size: 120px;
+  }
+  
+  #header-sub {
+    font-size: 20px;
+  }
+
+  .featurette p, p.comp-head {
+    font-size: 20px;
+  }
+
+  .quickstart-panel, .quickstart-panel p, .about-panel p {
+    font-size: 18px;
+  }
+
+  pre code {
+    font-size: 16px !important;
+  }
+
+}
+
+@media(max-width:375px) {
+  #header {
+    height: 195px;
+  }
+  
+  #header-grid {
+    padding: 0px;
+    top: 59px;
+    height: 137px;
+  }
+  
+  #header-text {
+    font-size: 80px;
+    margin-top: 12px;
+  }
+  
+  #header-sub {
+    font-size: 18px;
+  }
+
+  .featurette p, p.comp-head {
+    font-size: 18px;
+  }
+
+  .quickstart-panel, .quickstart-panel p, .about-panel p {
+    font-size: 16px;
+  }
+
+  pre code {
+    font-size: 10px !important;
+  }
+
 }
 
 .navbar-brand {
@@ -508,11 +568,6 @@ body {
 
 .quickstart-panel {
   color: #000;
-  font-size: 18px;
-}
-
-.quickstart-panel p {
-  font-size: 18px;
 }
 
 .quickstart-panel h3 {
@@ -531,7 +586,7 @@ body {
 }
 
 .quickstart-text {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 /*.icon-list li {
@@ -587,10 +642,8 @@ section.sec-normal2 {
   background: #f8f8f8;
 }
 
-
 pre code {
   background-color: #fff !important;
-  font-size: 16px !important;
 }
 
 pre.no-border {
@@ -712,9 +765,6 @@ pre[class*="language-"] {
   font-size:11px;
 }
 
-.featurette p {
-  font-size: 22px;
-}
 
 .featurette-image {
   margin-top: 20px;
