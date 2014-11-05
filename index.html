@@ -423,7 +423,7 @@ priceCog <- function(x) { list(
   slope = cog(lmCoef(x), desc = "list price slope"),
   meanList = cogMean(x$medListPriceSqft),
   listRange = cogRange(x$medListPriceSqft),
-  nObs = cog(sum(!is.na(x$medListPriceSqft))), 
+  nObs = cog(sum(!is.na(x$medListPriceSqft)), 
     desc = "number of non-NA list prices")
 )}
 priceCog(byCounty[[1]][[2]])
