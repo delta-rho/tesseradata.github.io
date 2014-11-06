@@ -305,6 +305,10 @@ hr.big-hr:after {
   padding-bottom: 50px;
 }
 
+pre {
+  background-color: #fff !important;
+}
+
 section {
   padding: 50px 0px 20px;
 }
