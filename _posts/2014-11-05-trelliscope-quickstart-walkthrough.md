@@ -11,7 +11,7 @@ Here is a video going through the Trelliscope quick start in the [Trelliscope tu
 
 <!--more-->
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/wRFXdycUaNs" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/0u9G7XGUVXI" frameborder="0" allowfullscreen></iframe>
 
 If all you want to see is the Trelliscope viewer in action (not the part about creating the display), skip to about 12:30.
 
