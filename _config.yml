@@ -14,6 +14,11 @@ url:               http://tessera.io
 baseurl:           /
 excerpt_separator: <!--more-->
 
+author :
+  name : Ryan Hafen
+  email : rhafen@gmail.com
+  github : hafen
+  twitter : hafenstats
 
 authors:
   ryan:
