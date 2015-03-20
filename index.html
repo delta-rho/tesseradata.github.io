@@ -11,7 +11,7 @@
   <title>Tessera</title>
 
   <link rel="shortcut icon" href="favicon.ico"/>
-  
+
   <link href='http://tessera.io/feed.xml' rel='alternate' type='application/atom+xml'>
 
   <!-- Bootstrap Core CSS -->
@@ -109,7 +109,7 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
-  
+
  <div id="header" class="container">
     <div class="row">
    <div id="header-grid">
@@ -150,7 +150,7 @@ Apply the thousands of statistical and visualization methods in the R language w
 <!-- With Tessera, if you know R, you can analyze big data. -->
               </p>
               <p class="page-scroll">
-                <a href="#components"> Tessera components 
+                <a href="#components"> Tessera components
                 <i class="icon-chevron-right more-icon"></i></a>
               </p>
             </div>
@@ -199,9 +199,9 @@ Once you are up and running, check out our detailed documentation, join our mail
       </div>
     </div>
   </section>
-  
+
   <div class="sec-normal"><div class="arrow-down arrow-gray"></div></div>
-  
+
   <section id="components" class="sec-normal">
     <div class="container">
       <div class="row">
@@ -213,16 +213,16 @@ The Tessera computational environment is powered by a statistical approach, Divi
           </p>
         </div>
       </div>
-      
+
       <hr class="featurette-divider">
-      
+
       <div class="row featurette">
         <div class="col-md-7">
           <h3 class="featurette-heading">
             <span class="component-header">Divide and Recombine (D&amp;R)</span>
           </h3>
             <p>
-Tessera is powered by Divide and Recombine. In D&amp;R, we seek meaningful ways to divide the data into subsets, apply statistical methods to each subset independently, and recombine the results of those computations in a statistically valid way.  This enables us to use the  existing vast library of methods available in R - no need to write scalable versions.  <!-- Sometimes the results are approximations of the exact result had we been able to process the data as a whole, but the potential slight loss in accuracy is a small penalty to pay for the simple, fast computation.  In D&amp;R, the data are parallelized, not the statistical methods.  Thus we have access the existing vast library of methods available in R.  --> 
+Tessera is powered by Divide and Recombine. In D&amp;R, we seek meaningful ways to divide the data into subsets, apply statistical methods to each subset independently, and recombine the results of those computations in a statistically valid way.  This enables us to use the  existing vast library of methods available in R - no need to write scalable versions.  <!-- Sometimes the results are approximations of the exact result had we been able to process the data as a whole, but the potential slight loss in accuracy is a small penalty to pay for the simple, fast computation.  In D&amp;R, the data are parallelized, not the statistical methods.  Thus we have access the existing vast library of methods available in R.  -->
 <!-- D&amp;R statistics research seeks division and recombination methods to maximize the accuracy of a result and to characterize its statistical variability. -->
           </p>
           <a href="http://ml.stat.purdue.edu/docs/dr.rhipe.stat.2012.pdf" class="btn btn-sm btn-warning">Read the D&amp;R Paper <i class="icon-file"></i></a>
@@ -287,9 +287,9 @@ RHIPE is the R and Hadoop Integrated Programming Environment.  RHIPE allows an a
       </div>
     </div>
   </section>
-  
+
   <div class="offcolor"><div class="arrow-down arrow-white offcolor"></div></div>
-  
+
   <section id="quickstart" class="offcolor">
     <div class="container">
       <div class="row">
@@ -347,7 +347,7 @@ Now you are ready to try out the quick start code or begin working through the t
 To get a feel for running in a large-scale Tessera environment, we have provided a <a href="http://www.vagrantup.com">Vagrant</a> setup that with a few simple commands allows you to provision a virtual machine on your workstation with the full Tessera stack running.
                 </p>
                 <p>
-The Vagrant script and instructions are available on 
+The Vagrant script and instructions are available on
 <a href="https://github.com/tesseradata/install-vagrant">Github.</a>
                 </p>
               </div>
@@ -361,7 +361,7 @@ We have provided an easy way to get going with Tessera in a large-scale environm
 This environment comes with <a href="http://www.rstudio.com">RStudio Server</a> running on the master node, so that all you need is a web browser to access R Studio, a fantastic R IDE that will be backed by your own Hadoop cluster.
                 </p>
                 <p>
-The EMR scripts and instructions are available on 
+The EMR scripts and instructions are available on
 <a href="https://github.com/tesseradata/install-emr">Github.</a>
                 </p>
               </div>
@@ -380,9 +380,9 @@ Setting up and installing all of the Tessera components on your own cluster will
               <h3>Try It</h3>
               <!-- <hr class="big-hr black"> -->
               <p>
-Here is a simple example to get a feel for Tessera usage.  Commentary about the example is available in the datadr tutorial <a href="http://tessera.io/docs-datadr/#quickstart">here</a>.  For more compelling 
-examples of Tessera in action, as well as in-depth tutorials, check out the 
-<span class="page-scroll"><a href="#resources">Resources</a></span> section and the <a href="blog"s>blog</a>.  
+Here is a simple example to get a feel for Tessera usage.  Commentary about the example is available in the datadr tutorial <a href="http://tessera.io/docs-datadr/#quickstart">here</a>.  For more compelling
+examples of Tessera in action, as well as in-depth tutorials, check out the
+<span class="page-scroll"><a href="#resources">Resources</a></span> section and the <a href="blog"s>blog</a>.
               </p>
               <pre class="no-border"><code class="language-r"># install package with housing data
 devtools::install_github("hafen/housingData")
@@ -393,16 +393,16 @@ library(datadr); library(trelliscope)
 head(housing)
 
 # divide by county and state
-byCounty <- divide(housing, 
+byCounty <- divide(housing,
   by = c("county", "state"), update = TRUE)
 
 # look at summaries
 summary(byCounty)
 
 # look at overall distribution of median list price
-priceQ <- drQuantile(byCounty, 
+priceQ <- drQuantile(byCounty,
   var = "medListPriceSqft")
-xyplot(q ~ fval, data = priceQ, 
+xyplot(q ~ fval, data = priceQ,
   scales = list(y = list(log = 10)))
 
 # slope of fitted line of list price for each county
@@ -432,7 +432,7 @@ priceCog <- function(x) { list(
   slope = cog(lmCoef(x), desc = "list price slope"),
   meanList = cogMean(x$medListPriceSqft),
   listRange = cogRange(x$medListPriceSqft),
-  nObs = cog(sum(!is.na(x$medListPriceSqft)), 
+  nObs = cog(sum(!is.na(x$medListPriceSqft)),
     desc = "number of non-NA list prices")
 )}
 priceCog(byCounty[[1]][[2]])
@@ -457,9 +457,9 @@ view()
       </div>
     </div>
   </section>
-  
+
   <div class="gray"><div class="arrow-down arrow-offcolor gray"></div></div>
-  
+
   <section id="resources" class="gray">
     <div class="container">
       <div class="row">
@@ -604,7 +604,7 @@ BMC Medical Informatics and Decision Making, 2009
                 <div class="media-body">
                   Join our
 <a href="https://groups.google.com/forum/#!forum/tessera-users">
-google group / mailing list.</a>  Simply send an email to 
+google group / mailing list.</a>  Simply send an email to
 <a href="mailto:tessera-users+subscribe@googlegroups.com">
 tessera-users+subscribe@googlegroups.com</a> to join.
                 </div>
@@ -614,7 +614,7 @@ tessera-users+subscribe@googlegroups.com</a> to join.
                   <i class="icon-github icon-big"></i>
                 </div>
                 <div class="media-body">
-                  For bugs or feature requests, feel free to post issues on github: 
+                  For bugs or feature requests, feel free to post issues on github:
                     <a href="https://github.com/tesseradata/datadr/issues">datadr</a>,
                     <a href="https://github.com/tesseradata/trelliscope/issues">trelliscope</a>,
                     <a href="https://github.com/tesseradata/RHIPE/issues">RHIPE</a>.
@@ -656,7 +656,7 @@ tessera-users+subscribe@googlegroups.com</a> to join.
                   <i class="icon-code-fork icon-big"></i>
                 </div>
                 <div class="media-body">
-                  Contributors are welcome!  <br>Feel free to fork any of our component repositories: <a href="https://github.com/tesseradata/datadr">datadr</a>, <a href="https://github.com/tesseradata/trelliscope">trelliscope</a>, <a href="https://github.com/tesseradata/RHIPE">RHIPE</a>.  And check out our <a href="https://github.com/tesseradata/datadr/blob/master/CONTRIBUTING.md">contributing guide</a>.
+                  Contributors are welcome!<br>Visit our <a href="https://github.com/tesseradata">Github organization page</a> and feel free to fork any of our component repositories: <a href="https://github.com/tesseradata/datadr">datadr</a>, <a href="https://github.com/tesseradata/trelliscope">trelliscope</a>, <a href="https://github.com/tesseradata/RHIPE">RHIPE</a>.  And check out our <a href="https://github.com/tesseradata/datadr/blob/master/CONTRIBUTING.md">contributing guide</a>.
                 </div>
               </li>
               <li class="media">
@@ -664,7 +664,7 @@ tessera-users+subscribe@googlegroups.com</a> to join.
                   <i class="icon-google icon-big"></i>
                 </div>
                 <div class="media-body">
-                  Join and introduce yourself on the <a href="https://groups.google.com/forum/#!forum/tessera-dev">developer's mailing list</a> by sending email to <a href="mailto:tessera-dev+subscribe@googlegroups.com">tessera-dev+subscribe@googlegroups.com</a>
+                  Join and introduce yourself on the <a href="https://groups.google.com/forum/#!forum/tessera-users">users's mailing list</a> by sending email to <a href="mailto:tessera-users+subscribe@googlegroups.com">tessera-users+subscribe@googlegroups.com</a>
                 </div>
               </li>
               <!-- irc -->
@@ -675,9 +675,9 @@ tessera-users+subscribe@googlegroups.com</a> to join.
       </div>
     </div>
   </section>
-  
+
   <div class="sec-normal"><div class="arrow-down arrow-gray"></div></div>
-  
+
   <section id="aboutus" class="sec-normal">
     <div class="container">
       <div class="row">
@@ -701,7 +701,7 @@ Tessera team members collectively cover all of the intellectual areas of data sc
       </div>
     </div>
   </section>
-  
+
   <footer class="text-center">
     <div class="footer-above">
       <div class="container">
@@ -731,16 +731,16 @@ Tessera team members collectively cover all of the intellectual areas of data sc
       </div>
     </div>
   </footer>
-    
+
   <div class="scroll-top page-scroll visible-xs visble-sm">
     <a class="btn btn-primary" href="#page-top">
       <i class="icon-chevron-up"></i>
     </a>
   </div>
-  
+
   <script src="https://cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script>
   <script type="text/javascript" src="public/js/grid.js"></script>
-  
+
   <script src="public/js/custom.js"></script>
   <script src="public/js/jquery.easing.min.js"></script>
   <script src="http://imsky.github.com/holder/holder.js"></script>
