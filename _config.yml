@@ -2,7 +2,7 @@ exclude: [_ignore, CNAME, README.md]
 
 # Dependencies
 markdown:          redcarpet
-highlighter:       false
+highlighter:       pygments
 
 # Permalinks
 permalink:         pretty
@@ -24,7 +24,7 @@ authors:
   ryan:
     display_name: Ryan Hafen
     email: rhafen@gmail.com
-    # web: 
+    # web:
     twitter: hafenstats
     github: hafen
 
