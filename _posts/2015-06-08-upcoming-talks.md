@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Updates to Trelliscope
+title: Upcoming Talks
 category : blog
 tags : [tessera, trelliscope, rbokeh]
 author: ryan
