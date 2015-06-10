@@ -1,7 +1,7 @@
 exclude: [_ignore, CNAME, README.md]
 
 # Dependencies
-markdown:          redcarpet
+markdown:          kramdown
 highlighter:       pygments
 
 # Permalinks
@@ -29,6 +29,6 @@ authors:
     github: hafen
 
 # Custom vars
-version:           1.0.0
+version:        1.0.0
 github:
   repo:         https://github.com/tesseradata/tesseradata.github.io
