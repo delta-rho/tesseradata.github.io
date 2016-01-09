@@ -2,7 +2,7 @@ exclude: [_ignore, CNAME, README.md]
 
 # Dependencies
 markdown:          redcarpet
-highlighter:       pygments
+# highlighter:       pygments
 
 # Permalinks
 permalink:         pretty
