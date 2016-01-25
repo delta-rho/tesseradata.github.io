@@ -13,7 +13,7 @@ Imagine being able to interactively visualize hundreds of gigabytes of high-freq
 
 As part of a financial data analysis exercise for the DARPA XDATA program last summer, we created such a Trelliscope display with nearly one million panels (997,204 to be exact).  Watch the video below to see what it looks like.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=KatkJx9Ui0o" frameborder="0" allowfullscreen></iframe>
+<iframe width="690" height="389" src="https://www.youtube.com/embed/KatkJx9Ui0o" frameborder="0" allowfullscreen></iframe>
 
 In this display, we partitioned billions of transactions into subsets by trading day and stock symbol.  An [rbokeh](http://hafen.github.io/rbokeh/) plot of volume-adjusted average price vs. time at one-second intervals is shown for each subset, and the plots are sortable and filterable by several *cognostics* - metrics computed from each subset - such as the exchange the stock is traded on, the number of trades in the day, the price change for the day, etc.
 
