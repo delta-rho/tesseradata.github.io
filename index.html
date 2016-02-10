@@ -419,13 +419,13 @@ countySlopes <- recombine(byCountySlope, combRbind)
 plot(sort(countySlopes$val))
 
 # make a time series trelliscope display
-vdbConn("housingjunk/vdb", autoYes = TRUE)
+vdbConn(tempfile("vdb"), autoYes = TRUE)
 
 # make and test panel function
 timePanel <- function(x)
   xyplot(medListPriceSqft + medSoldPriceSqft ~ time,
     data = x, auto.key = TRUE, ylab = "$ / Sq. Ft.")
-timePanel(byCounty[[1]][[2]])
+timePanel(byCounty[[1]]$value)
 
 # make and test cognostics function
 priceCog <- function(x) { list(
@@ -435,7 +435,7 @@ priceCog <- function(x) { list(
   nObs = cog(sum(!is.na(x$medListPriceSqft)),
     desc = "number of non-NA list prices")
 )}
-priceCog(byCounty[[1]][[2]])
+priceCog(byCounty[[1]]$value)
 
 # add display panel and cog function to vdb
 makeDisplay(byCounty,
