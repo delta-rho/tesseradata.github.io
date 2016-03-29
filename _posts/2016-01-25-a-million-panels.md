@@ -4,7 +4,7 @@ title: A One Million Panel Trelliscope Display
 category : blog
 tags : [tessera, trelliscope, rbokeh]
 author: ryan
-permalink: blog/a-million-panels
+permalink: blog/a-million-panels/
 ---
 
 Imagine being able to interactively visualize hundreds of gigabytes of high-frequency daily equity trading activity across tens of thousands of stock symbols over a half of a year of data.  And imagine being able to create such a visualization with a few simple commands in R.
