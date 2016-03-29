@@ -4,7 +4,7 @@ title: Upcoming Talks
 category : blog
 tags : [tessera, trelliscope, rbokeh]
 author: ryan
-permalink: blog/upcoming-talks
+permalink: blog/upcoming-talks/
 ---
 
 We have several talks and tutorials coming up that have been keeping us busy.

@@ -4,7 +4,7 @@ title: Introducing Tessera
 category : blog
 tags : [tessera]
 author: ryan
-permalink: blog/introducing-tessera
+permalink: blog/introducing-tessera/
 ---
 
 We are very pleased to announce Tessera, an open source statistical computing environment for deep analysis of large, complex data.

@@ -4,7 +4,7 @@ title: Quick Interactive Faceting with Trelliscope
 category : blog
 tags : [tessera, trelliscope, datadr, rbokeh]
 author: ryan
-permalink: blog/quick-interactive-faceting
+permalink: blog/quick-interactive-faceting/
 ---
 
 We've been pushing a lot of updates and fixes to several of our projects lately and we'd like to show a few examples of some of the new features.  In this post we'll cover some new features in datadr and trelliscope that provide a quick mechanism for generic faceting, a very powerful visualization technique, along with examples of embedding [htmlwidgets](http://www.htmlwidgets.org) in trelliscope displays and plugging trelliscope into the [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) pipeline.

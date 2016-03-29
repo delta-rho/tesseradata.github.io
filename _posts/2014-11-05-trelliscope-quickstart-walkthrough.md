@@ -4,7 +4,7 @@ title: Trelliscope Quickstart Visual Walkthrough
 category : blog
 tags : [tessera, trelliscope]
 author: ryan
-permalink: blog/trelliscope-quickstart-video
+permalink: blog/trelliscope-quickstart-video/
 ---
 
 Here is a video going through the Trelliscope quick start in the [Trelliscope tutorial](http://tessera.io/docs-trelliscope/#quickstart).

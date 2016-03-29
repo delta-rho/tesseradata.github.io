@@ -4,7 +4,7 @@ title: Tessera Update
 category : blog
 tags : [tessera]
 author: ryan
-permalink: blog/tessera-update
+permalink: blog/tessera-update/
 ---
 
 It has been a long time since the last post!  Fortunately this is not because of lack of activity on Tessera, but because things have been incredibly busy.  In this post we'll update you on what's been going on.  Expect posts much more frequently in the future!
