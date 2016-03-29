@@ -5,7 +5,7 @@ markdown:          redcarpet
 # highlighter:       pygments
 
 # Permalinks
-permalink:         /:title/index.html
+permalink:         blog/:title/
 
 # Setup
 title:             Tessera
